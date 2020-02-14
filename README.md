@@ -15,6 +15,7 @@ Dưới đây là tóm tắt kiến thức học được sau khoá học:
     Phân biệt đươc sự khác nhau giữa **Link**, **NavLink**, **Custom Link**. Link như là thẻ a trong HTML vậy, còn NavLink là một bản nâng cấp của Link khi có props activeClassName giúp add class khi người dùng active link đó(click vào link đó). Còn custom link thì cao cấp hơn, có thể bọc cái Link đó bên ngoài nhiều thẻ và class khác nhau.
     Rồi **Route** giúp render các Component tương ứng với cac URL hiện tại, ví dụ URL /home thì sẽ hiển thị Component của Homepage. Còn 3 cái thẻ _Link_ trên giúp cập nhật lại URL nhưng không làm load trang
 -   **[Axios](https://www.npmjs.com/package/axios)** giúp gọi API ở phía client giống như Jquery ajax vậy
+-   **[Mock api](https://www.mockapi.io/)** giúp tạo nhanh một api để test, à mật khẩu mock api là 123456 :3
 
 ## Note:
 
