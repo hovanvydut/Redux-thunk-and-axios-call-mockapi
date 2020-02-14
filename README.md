@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About project
 
-## Available Scripts
+Project được làm theo khoá học reactjs trên kênh youtube nghiepuit kết hợp với việc đọc các documentation để bổ trợ:
+Dưới đây là tóm tắt kiến thức học được sau khoá học:
 
-In the project directory, you can run:
+-   **[ReactJs](https://redux.js.org/introduction/getting-started)**: :)) không cần nói nhiều, là thư viện hỗ trợ buil ứng dụng SPA
+-   **[Redux](https://react-redux.js.org/6.x/introduction/quick-start)**(react-redux) Giúp quản lí các state độc lập với các component. Redux sinh ra nhằm giải quyết vấn đề về việc chia sẻ state các Component khác nhau (đặc biệt là các component khác nhánh). Tuy nhiên, có những Component chỉ cần xử lí các logic trong Component đó nên không cần dùng redux, chỉ dùng internal state.
+    ![enter image description here](https://miro.medium.com/max/1024/1*XHMeHrC4tdwTSHWRalm_lQ.png)
+    ![Luồng xử lí của redux](https://viblo.asia/uploads/5c72ff3e-859a-457a-ae11-e1392baa90af.gif)
 
-### `yarn start`
+> Trong redux để ý các method quan trọng: connect, mapStateToPorps, mapDispatchToProps, Provider. Ở reactjs thì có thêm các method combineReducer giúp gộp các slice reducer lại với nhau
 
-Runs the app in the development mode.<br />
-Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+-   **[Redux-thunk](https://github.com/reduxjs/redux-thunk)** giúp tạo các middleware asyn action(là các creator action trả về các hàm như callApi thay vì plain object như action thường). Middleware hoạt động sau khi dispatch(action) và trước khi redux nhận action để phân loại và xử lí. Action creator --> action --> dispatch(action) --> middleware-reduxthunk (ở đây thường là nơi call API) --> reducer --> thay đổi state của Store --> tất cả hàm mapStateToProps đều được gọi và bắt đầu từ thằng Root(file App.js) rồi đến các Component con, chút, chắc giúp truyền các state ở store thành các props --> hàm renders trong các component có props thay đổi sẽ được gọi lại (theo life cycle) --> update thành công view
+-   **[React-router](https://reacttraining.com/react-router/web/example/basic)**
+    Phân biệt đươc sự khác nhau giữa **Link**, **NavLink**, **Custom Link**. Link như là thẻ a trong HTML vậy, còn NavLink là một bản nâng cấp của Link khi có props activeClassName giúp add class khi người dùng active link đó(click vào link đó). Còn custom link thì cao cấp hơn, có thể bọc cái Link đó bên ngoài nhiều thẻ và class khác nhau.
+    Rồi **Route** giúp render các Component tương ứng với cac URL hiện tại, ví dụ URL /home thì sẽ hiển thị Component của Homepage. Còn 3 cái thẻ _Link_ trên giúp cập nhật lại URL nhưng không làm load trang
+-   **[Axios](https://www.npmjs.com/package/axios)** giúp gọi API ở phía client giống như Jquery ajax vậy
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Note:
 
-### `yarn test`
+-   Hi vọng là trong thời gian tới mình có thể tự tạo được một ứng dụng SPA từ đầu đến cuối, tự phân tích, thiết kế, vẽ diagram, UI, rồi tự viêt API bằng ExpressJS :3
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Me
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-   Mình là Vy, chưa vợ chưa con, vẫn còn trẻ tru, đây là thông tin contact của mình:
+-   Email: hovanvydut@gmail.com
+-   Fb: fb.com/hovanvydut
